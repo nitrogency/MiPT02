@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MiPT02</string>
+    <string name="character_selection">Characters</string>
+    <string name="words_selection">Words</string>
+
+    <string-array name="selection_options">
+        <item>Characters</item>
+        <item>Words</item>
+    </string-array>
+</resources>
