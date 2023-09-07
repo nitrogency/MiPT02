@@ -36,18 +36,19 @@ public class MainActivity extends AppCompatActivity {
 
     public void onBtnCountClick(View view){
         String selectedOption = this.spSelectionOptions.getSelectedItem().toString();
-        String CharactersSelectedOption = getResources().getString(R.string.character_selection);
-        String WordsSelectedOption = getResources().getString(R.string.words_selection);
+        String charactersSelectedOption = getResources().getString(R.string.character_selection);
+        String wordsSelectedOption = getResources().getString(R.string.words_selection);
+        String emptyInputError = getResources().getString(R.string.empty_input_error);
 
         String userInput = this.edPhrase.getText().toString();
         if(TextUtils.isEmpty(userInput)){
-            Toast.makeText(getBaseContext(),"Please enter text", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getBaseContext(),emptyInputError, Toast.LENGTH_SHORT).show();
         }
         else {
-            if(selectedOption.equals(CharactersSelectedOption)){
+            if(selectedOption.equals(charactersSelectedOption)){
                 this.tvMain.setText(TextCounter.getCharacterCount(userInput));
             }
-            if(selectedOption.equals(WordsSelectedOption)){
+            if(selectedOption.equals(wordsSelectedOption)){
                 this.tvMain.setText(TextCounter.getWordCount(userInput));
             }
         }
