@@ -14,9 +14,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import utilities.TextCounter;
 public class MainActivity extends AppCompatActivity {
 
-    private Spinner spSelectionOptions;
-    private EditText edPhrase;
-    private TextView tvMain;
+    public Spinner spSelectionOptions;
+    public EditText edPhrase;
+    public TextView tvMain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
